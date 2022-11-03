@@ -53,6 +53,17 @@ router.post(
   }
 );
 
+// get photo by id
+router.get('/photo/:id', async (req, res) => {
+  try {
+    const result = await Photo.findById(req.params.id);
+    res.set('Content-Type', 'image/jpeg');
+    res.send(result.photo);
+  } catch (error) {
+    res.status(400).send({ get_error: 'Error while getting photo.' });
+  }
+});
+
 // delete photo
 router.delete('/photo/:id', async (req, res) => {
   try {
