@@ -1,0 +1,77 @@
+.app-header {
+    padding: 5px 15px;
+}
+
+.app-header h1 {
+    padding-top: 8px;
+    color: #3f51b5;
+}
+
+.app-photos {
+    padding: 15px;
+}
+
+.image-upload {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding: 8px;
+}
+
+.image-upload .file-input-icon {
+    top: 5px;
+    position: relative;
+    right: 5px;
+}
+
+.image-upload .file-input-label {
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.image-upload>input {
+    display: none;
+
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    margin: 5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+}
+
+
+mat-card-actions {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.container:hover mat-card-actions {
+    opacity: 1;
+}
+
+.empty-photos {
+    text-align: center;
+    border: 1px solid #3f51b5;
+    padding: 50px;
+    margin: 100px auto;
+    color: #3f51b5;
+}
